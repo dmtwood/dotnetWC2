@@ -1,0 +1,39 @@
+﻿<Window x:Class="WE02Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WE02Wpf"
+        mc:Ignorable="d"
+    Title="MyBank© management system V1.0" Height="235" Width="500" MinWidth="500" MinHeight="220">
+    <Grid>
+        <Menu Height="30" VerticalAlignment="Top">
+            <MenuItem Header="_File">
+                <MenuItem x:Name="FileMenuNewAccount" Header="New _bank account..." Click="FileMenuNewAccount_Click" />
+                <MenuItem x:Name="FileMenuNewClient" Header="New _customer..." Click="FileMenuNewClient_Click" />
+                <MenuItem x:Name="FileMenuExit" Header="E_xit" Click="FileMenuExit_Click" />
+            </MenuItem>
+            <MenuItem x:Name="MenuAccounts" Header="_Accounts" />
+            <MenuItem x:Name="MenuClients" Header="_Clients" />
+
+        </Menu>
+        <Label Content="Balance:" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblBalance" Content="€ 0,00" HorizontalAlignment="Left" Margin="99,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblAccountType" Content="Regular Account" HorizontalAlignment="Left" Margin="99,56,0,0" VerticalAlignment="Top"/>
+        <Label Content="Creation date:" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblCreationDate" Content="11 mrt 2000" HorizontalAlignment="Left" Margin="99,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Interest:" HorizontalAlignment="Left" Margin="287,25,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblInterest" Content="0,2" HorizontalAlignment="Left" Margin="345,25,0,0" VerticalAlignment="Top"/>
+        <Label Content="IBAN:" HorizontalAlignment="Left" Margin="287,51,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblIBAN" Content="BE81 1234 5678 9876" HorizontalAlignment="Left" Margin="345,51,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Actions" Margin="10,113,10,10">
+            <Grid>
+                <Label Content="Amount" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="TxtAmount" HorizontalAlignment="Left" Margin="63,14,0,0" Text="0,00" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="BtnDeposit" Content="_Deposit" HorizontalAlignment="Left" Margin="204,12,0,0" VerticalAlignment="Top" Width="70" Click="BtnDeposit_Click"/>
+                <Button x:Name="BtnWithdraw" Content="_Withdraw" HorizontalAlignment="Left" Margin="283,12,0,0" VerticalAlignment="Top" Width="70" Click="BtnWithdraw_Click"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
